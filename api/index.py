@@ -2,8 +2,8 @@ import os
 from typing import Any, Dict, Optional
 
 import requests
-from flask import Flask, jsonify, request
 from dotenv import load_dotenv
+from flask import Flask, jsonify, request
 
 
 load_dotenv()
