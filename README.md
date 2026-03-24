@@ -17,6 +17,7 @@
 - `/api/webhook.py` — webhook endpoint
 - `/requirements.txt` — Python зависимости
 - `/vercel.json` — конфиг деплоя
+- `/.python-version` — версия Python для Vercel
 - `/.env.template` — шаблон для локального `.env`
 
 ## Переменные окружения
@@ -35,6 +36,18 @@
 ```bash
 cp .env.template .env
 ```
+
+## Версия Python на Vercel
+
+Vercel берет версию Python из файла `.python-version`.
+
+В этом проекте указано:
+
+```text
+3.12
+```
+
+Если захотите, сможете поменять это значение позже.
 
 ## Где получить токены и id
 
