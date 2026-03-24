@@ -43,6 +43,7 @@ def send_to_owner(text: str) -> None:
 
 
 @app.get("/")
+@app.get("/api/webhook")
 def index():
     return jsonify(
         {
@@ -53,6 +54,7 @@ def index():
 
 
 @app.post("/")
+@app.post("/api/webhook")
 def webhook():
     if not TELEGRAM_BOT_TOKEN or not OWNER_CHAT_ID:
         return jsonify({"ok": False, "error": "Missing env vars"}), 500

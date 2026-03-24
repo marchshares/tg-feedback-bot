@@ -176,7 +176,7 @@ flask --app api.index run --port 8000
 Локальная проверка health endpoint:
 
 ```bash
-curl http://127.0.0.1:8000/
+curl http://127.0.0.1:8000/api/webhook
 ```
 
 Ожидаемый ответ:
@@ -190,7 +190,7 @@ curl http://127.0.0.1:8000/
 Можно руками отправить тестовый webhook:
 
 ```bash
-curl -X POST http://127.0.0.1:8000/ \
+curl -X POST http://127.0.0.1:8000/api/webhook \
   -H "Content-Type: application/json" \
   -H "X-Telegram-Bot-Api-Secret-Token: my-super-secret-token-123" \
   -d '{
@@ -241,7 +241,7 @@ https://abcd-1234.ngrok-free.app
 curl -X POST "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
   -H "Content-Type: application/json" \
   -d '{
-    "url": "https://abcd-1234.ngrok-free.app/",
+    "url": "https://abcd-1234.ngrok-free.app/api/webhook",
     "secret_token": "my-super-secret-token-123"
   }'
 ```
